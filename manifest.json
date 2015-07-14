@@ -1,12 +1,12 @@
 {
-    "manifest_version": 1,
+    "manifest_version": 2, 
 
-    "name": "Signal Auto-Login"
-    "description": "This plugin will keep you logged into signal"
+    "name": "Signal Auto-Login",
+    "description": "This plugin will keep you logged into signal",
     "version": "1.0",
     
     "browser_action": {
-        "default_icon": "icon.png",
+        "default_icon": "signal_on.png",
         "default_popup": "popup.html"
     },
     "permissions":[
