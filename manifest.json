@@ -4,13 +4,25 @@
     "name": "Signal Auto-Login",
     "description": "This plugin will keep you logged into signal",
     "version": "1.0",
-	"options_page": "options.html",
+    "options_page": "options.html",
     
     "browser_action": {
-        "default_icon": "signal_on.png",
-        "default_popup": "popup.html"
+        "default_icon": "128signal_on.png"
     },
+
+    "icons": {
+	"128" : "128signal_on.png",
+	"19" : "signal_on.png"
+    },
+
+    "background": {
+	"scripts": ["background.js"]
+    },
+
     "permissions":[
-        "activeTab"
+	"tabs",
+        "activeTab",
+	"notifications"
     ]
+    
 }
