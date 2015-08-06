@@ -4,9 +4,11 @@ var user = "test";
 var pass = "tester";
 var URL = "hub.signal.co/login";
 
+
+loadXMLDoc("https://www.youtube.com")
 //this is how you access the toolbar button.
 //chrome.browserAction.onClicked.addListener(function(tab) { alert('Icon Clicked!')});
-chrome.browserAction.onClicked.addListener(function(tab) { login(user,pass)});
+//chrome.browserAction.onClicked.addListener(function(tab) { login(user,pass)});
 
 function userAgent(){
 	/*
@@ -27,3 +29,19 @@ function login(user, pass) {
     $('button.submit').click()
 }
 
+
+
+function loadXMLDoc(URL) {
+  chrome.browserAction.onClicked.addListener(function(tab) { alert('The function did run')});
+  if (window.XMLHttpRequest){
+	xmlhttp=new XMLHttpREquest();
+  }
+  xmlhttp.onreadystatechange=function() {
+	if(xmlhttp.readyState==4 && xmlhttp.status==200){
+	  //alert(xmlhttp.responseText);
+	  chrome.browserAction.onClicked.addListener(function(tab) { alert(xmlhttp.responseText)});
+	}
+  }
+  xmlhttp.open("GET", URL, false);
+  xmlhttp.send();
+}
