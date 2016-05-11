@@ -7,22 +7,23 @@
     "options_page": "options.html",
     
     "browser_action": {
-        "default_icon": "128signal_on.png"
+        "default_icon": "128signal_on.png",
+        "default_popup": "popup.html"
     },
 
     "icons": {
-	"128" : "128signal_on.png",
-	"19" : "signal_on.png"
+         "128" : "128signal_on.png",
+         "19" : "signal_on.png"
     },
 
     "background": {
-	"scripts": ["background.js"]
+       "scripts": ["background.js"]
     },
 
     "permissions":[
-	"tabs",
-        "activeTab",
-	"notifications"
+         "tabs",
+         "activeTab",
+         "notifications"
     ]
     
 }
